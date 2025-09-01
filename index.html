@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pythagoras Theorem Calculator</title>
+  <title>Hypotenuse Calculator</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="shortcut icon" href="index.svg" type="image/svg+xml">
  
   <script>
     console.log("test")
@@ -23,13 +22,14 @@ function processHyp(){
 
     // Check if the inputs are valid numbers
     if (isNaN(sideA) || isNaN(sideB) || sideA <= 0 || sideB <= 0) {
-      alert('Please enter valid positive numbers for both sides.');
+      result.innerText='Please enter valid positive numbers for both sides.';
+      result.style.color='#ff0000'
       return;
     }
 
     // Calculate the hypotenuse using the Pythagoras theorem
     const hypotenuse = (((sideA**2)+(sideB**2))**0.5);
-    
+          result.style.color='#008800'
     result.innerHTML=`${hypotenuse.toFixed(4)} cm <br />to 2 decimal places`
     console.log(hypotenuse.toFixed(4))
 }
@@ -44,9 +44,11 @@ function processHyp(){
       <label for="sideB">Side B(cm)</label>
     <input type="number" name="sideB" id="sideB" placeholder="10"/>
     <button id="ProcessHy" onclick=processHyp() type="submit">Process Hypotenuse</button>
-    
-   <h4>The length of the hypotenuse is:</h4> 
+    <div class="results">
+         <h3>The length of the hypotenuse is:</h3> 
     <span id="result"></span>
+    </div>
+
   </div>
 </body>
 
