@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pythagoras Theorem Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="index.svg" type="image/svg+xml">
+ 
+  <script>
+    console.log("test")
+    
+    
+function processHyp(){
+  const sideAInput = document.getElementById('sideA');
+  const sideBInput = document.getElementById('sideB');
+  const result = document.getElementById('result');
+
+  
+    const sideA = parseFloat(sideAInput.value);
+    const sideB = parseFloat(sideBInput.value);
+
+    // Check if the inputs are valid numbers
+    if (isNaN(sideA) || isNaN(sideB) || sideA <= 0 || sideB <= 0) {
+      alert('Please enter valid positive numbers for both sides.');
+      return;
+    }
+
+    // Calculate the hypotenuse using the Pythagoras theorem
+    const hypotenuse = (((sideA**2)+(sideB**2))**0.5);
+    
+    result.innerHTML=`${hypotenuse.toFixed(4)} cm <br />to 2 decimal places`
+    console.log(hypotenuse.toFixed(4))
+}
+
+
+  </script>
+</head>
+<body>
+  <div id="PythagorasMainContainer">
+    <label for="sideA">Side A(cm)</label>
+    <input type="number" name="sideA" id="sideA" placeholder="10"/>
+      <label for="sideB">Side B(cm)</label>
+    <input type="number" name="sideB" id="sideB" placeholder="10"/>
+    <button id="ProcessHy" onclick=processHyp() type="submit">Process Hypotenuse</button>
+    
+   <h4>The length of the hypotenuse is:</h4> 
+    <span id="result"></span>
+  </div>
+</body>
+
+</html>

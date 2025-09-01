@@ -1,0 +1,55 @@
+body {
+  /* This centers the container both vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* This ensures the body takes up at least the full viewport height */
+  margin: 0;
+  font-family: sans-serif; /* A clean, modern font */
+  background-color: #f4f4f9; /* A light, soft background color */
+}
+
+#PythagorasMainContainer {
+  display: flex;
+  flex-direction: column; /* Stacks the labels and inputs vertically */
+  gap: 20px; /* Adds space between each label/input pair */
+  padding: 40px;
+  background-color: #fff; /* A crisp white background for the container */
+  border-radius: 12px; /* Softly rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  width: 90%;
+  max-width: 400px; /* Keeps the container from getting too wide on large screens */
+  text-align: center;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #333; /* Darker text for better readability */
+  font-weight: 600; /* Makes the label text a bit bolder */
+}
+
+input {
+  width: 100%; /* Makes the input fields take up the full width of the container */
+  padding: 12px;
+  border: 1px solid #ccc; /* A subtle border */
+  border-radius: 8px; /* Rounded corners for the input fields */
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  transition: border-color 0.3s ease; /* A smooth transition for the border color on focus */
+}
+
+input:focus {
+  outline: none; /* Removes the default outline on focus */
+  border-color: #007bff; /* A nice blue color when the input is focused */
+}
+
+/* This is a simple hover effect on the container itself to show it's interactive */
+#PythagorasMainContainer:hover {
+  transform: translateY(-5px); /* Lifts the container slightly on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+span{
+  font-size:2em;
+}
