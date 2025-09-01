@@ -54,17 +54,17 @@ span{
   font-size:1.3rem;
 }
 
-button{
+#ProcessHyp{
   width: 100%; /* Makes the input fields take up the full width of the container */
-  padding: 12px;
-  border: 1px solid #ccc; /* A subtle border */
+  padding: 1rem 2rem;
+  border: 1px solid #000; /* A subtle border */
   border-radius: 8px; /* Rounded corners for the input fields */
-  font-size: 1rem;
+  font-size:1.25rem;
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
   transition: border-color 0.3s ease; /* A smooth transition for the border color on focus */
 }
 
-button:hover, button:focus{
+#ProcessHyp:hover, #processHyp:focus{
   outline: none; /* Removes the default outline on focus */
   border-color: #007bff; /* A nice blue color when the input is focused */
 }

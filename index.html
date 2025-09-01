@@ -30,7 +30,7 @@ function processHyp(){
     // Calculate the hypotenuse using the Pythagoras theorem
     const hypotenuse = (((sideA**2)+(sideB**2))**0.5);
           result.style.color='#008800'
-    result.innerHTML=`${hypotenuse.toFixed(4)} cm <br />to 2 decimal places`
+    result.innerHTML=`${hypotenuse.toFixed(4)} cm <br />to 4 decimal places`
     console.log(hypotenuse.toFixed(4))
 }
 
@@ -43,7 +43,7 @@ function processHyp(){
     <input type="number" name="sideA" id="sideA" placeholder="10"/>
       <label for="sideB">Side B(cm)</label>
     <input type="number" name="sideB" id="sideB" placeholder="10"/>
-    <button id="ProcessHy" onclick=processHyp() type="submit">Process Hypotenuse</button>
+    <button id="ProcessHyp" onclick=processHyp() type="submit">Process Hypotenuse</button>
     <div class="results">
          <h3>The length of the hypotenuse is:</h3> 
     <span id="result"></span>
